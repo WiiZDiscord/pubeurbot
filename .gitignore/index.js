@@ -5,7 +5,7 @@ var clientDiscord = new Discord.Client();
 const fs = require('fs')
 var randnum = 0;
 
-bot.login("NDc4OTIzODM1NDQyMzMxNjQ4.DlSvKA.47azcsqoHS78hvgBzoZKK8VpvlI")
+bot.login(process.env.TOKEN)
 
 
 bot.on('ready', () => {
