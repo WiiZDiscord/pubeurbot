@@ -1,0 +1,23 @@
+  bot.on('message', message => { 
+ 
+ 
+  var userData = JSON.parse(fs.readFileSync('./userData.json', 'utf-8'));
+  var sender = message.author;
+  var msg = message.content.toUpperCase();
+  
+  if(message.content === 'p.xp') {
+ 	message.channel.send(`Votre nombre d'xp : **${userData[sender.id].messagesSent}**`)
+}
+ 
+ 
+if (!userData[sender.id]) userData[sender.id] = {
+    messageSent: 0
+}
+ 
+userData[sender.id].messagesSent++;
+ 
+fs.writeFile('./userData.json', JSON.stringify(userData), (err) => {
+    if (err) console.error(err);
+});
+ 
+});
