@@ -252,7 +252,7 @@ fs.writeFile('./userData.json', JSON.stringify(userData), (err) => {
 
 
 bot.on('message', message => {
-  if(message.content === prefix + 'antiraid('){
+  if(message.content === prefix + 'antiraid'){
   var help_embed = new Discord.RichEmbed()
     .setColor("#4286f4")
     .setTitle(`Voici un lien vers une team Anti-raid`)
